@@ -1,0 +1,2 @@
+[libraries]
+storage-gson = "org.fenixteam:storage-gson-dist:1.0.0"
