@@ -1,5 +1,6 @@
 plugins {
   `java-library`
+  id("org.cadixdev.licenser")
 }
 
 repositories {
@@ -23,6 +24,12 @@ java {
   toolchain {
     languageVersion.set(JavaLanguageVersion.of(17))
   }
+}
+
+license {
+  header.set(rootProject.resources.text.fromFile("header.txt"))
+  include("**/*.java")
+  newLine.set(false)
 }
 
 tasks {
